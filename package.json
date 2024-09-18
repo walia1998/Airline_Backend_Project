@@ -1,0 +1,16 @@
+{
+  "name": "airline_backend_project",
+  "version": "1.0.0",
+  "description": "Micro Service for handlig Flight CRUD",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.0",
+    "nodemon": "^3.1.5"
+  }
+}
