@@ -1,5 +1,5 @@
 
 
 module.exports = {
-    CityServcie  : require('./city-service')
+    CityService  : require('./city-service')
 }
