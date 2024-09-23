@@ -26,6 +26,7 @@ class CityRepository {
     }
     async updateCity(cityId, data) {
         try {
+            console.log("City ID:", cityId);
            /**
             *  The below approach also work but will not return updated object
             * If we are uusing Pg then returning : true can be used, else not 
@@ -40,6 +41,9 @@ class CityRepository {
             // });
 
             // For getting updated data in mysql we use the below approach
+            const city = await City.findByPk(cityId);
+            city.name = data.name;
+            await city.save();
             return city;
         } catch (error) {
             console.log("Something went wrong in the repository layer");
@@ -56,6 +60,19 @@ class CityRepository {
             throw {error};
         }
     }
+
+
+    async getAllCities() {
+        try {
+        const cities = await City.findAll();
+        return cities; 
+        } catch (error) {
+            console.log("Something went wrong in the repository layer");
+                throw {error};
+            }
+        }
 }
+
+
 
 module.exports = CityRepository;
