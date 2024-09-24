@@ -52,4 +52,8 @@
 
    npx sequelize model:generate --name City --attributes name:String
 
-  
+  ```
+ DELETE FROM Cities WHERE name = 'Chennai' LIMIT 1; 
+
+ For delete duplicate data
+  ```
