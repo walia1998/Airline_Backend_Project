@@ -3,6 +3,8 @@ const express =  require('express');
 const CityController = require('../../controllers/city-controller.js');
 
 const FlighController = require('../../controllers/flight-controller.js');
+
+const AirportController = require('../../controllers/airport-controller.js');
 const router = express.Router();
 
 router.post('/city', CityController.create);
@@ -17,7 +19,8 @@ router.get('/city', CityController.getAll)
 
 router.post('/flights', FlighController.create);
 
-router.get('/flights', FlighController.getAll)
+router.get('/flights', FlighController.getAll);
+router.post('/airports', AirportController.create);
 
 
 
