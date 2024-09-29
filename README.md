@@ -55,7 +55,7 @@
   ```
  DELETE FROM Cities WHERE name = 'Chennai' LIMIT 1; 
 
- For delete duplicate data this is Mysql syntax
+ For delete duplicate data 
   ```
 
   
